@@ -1,7 +1,5 @@
 import { DATA_01 } from "./data";
 
-console.log("hello world");
-
 const parseData = (str: string) => {
   const splitted = str.split(/\r?\n/);
   const data = [[]];
