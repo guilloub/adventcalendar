@@ -1,9 +1,35 @@
-export const SCORE_MAP = new Map<string, number>(
+export type XYZ = "X" | "Y" | "Z";
+export type ABC = "A" | "B" | "C";
+
+export const LOSE_TO_MAP = new Map<ABC, ABC>(
+  Object.entries({
+    A: "B",
+    B: "C",
+    C: "A",
+  }) as any
+);
+
+export const BEATS_MAP = new Map<ABC, ABC>(
+  Object.entries({
+    A: "C",
+    B: "A",
+    C: "B",
+  }) as any
+);
+
+export const SCORE_MAP_ABC = new Map<ABC, number>(
+  Object.entries({
+    A: 1,
+    B: 2,
+    C: 3,
+  }) as any
+);
+export const SCORE_MAP_XYZ = new Map<XYZ, number>(
   Object.entries({
     X: 1,
     Y: 2,
     Z: 3,
-  })
+  }) as any
 );
 
 export const DATA_O2_TEST = [
